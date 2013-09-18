@@ -426,12 +426,6 @@ foreach ($all_ids as $categoryId => $recordIds) {
                 } else {
                     for (var j = 0; j < same_records.length; j++) {
                         $('#' + same_records[j].id).attr('checked', status);
-
-                        var catid              = same_records[j].id.match(/active_record_(\d+)_\d+/)[1];
-                        var current_item_count = $('#js-active-records-' + catid).html();
-                        var delta              = 'checked' === status ? -1 : 1;
-
-                        $('#js-active-records-' + catid).html(current_item_count * 1 + delta);
                     }
                 }
             }
